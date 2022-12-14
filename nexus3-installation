@@ -17,6 +17,7 @@ get the password at
 root@nexus-repo:/srv/nexus/nexus-data# docker exec -it nexus cat sonatype-work/nexus3/admin.password
 5365728f-4420-49bb-8d41-be21c65b5384root@nexus-repo:/srv/nexus/nexus-data#
 
-5365728f-4420-49bb-8d41-be21c65b5384
+then change default password
+
 
 
