@@ -1,0 +1,22 @@
+
+mkdir -p /srv/nexus/nexus-data && chown -R 200 srv/nexus/nexus-data
+
+docker run -d -p 8081:8081 -p 5810:5810 -p 5811:5811 --name nexus -v /root/srv/nexus/nexus-data:/nexus-data madbum.jfrog.io/docker/sonatype/nexus3
+
+tunnel to the VM
+
+ssh -vNT4L 0.0.0.0:8081:0.0.0.0:8081 -i key-path/azureuser.pem  azureuser@20.249.58.56
+
+access thru local
+127.0.0.1:8081
+
+Default User: admin
+
+get the password at 
+
+root@nexus-repo:/srv/nexus/nexus-data# docker exec -it nexus cat sonatype-work/nexus3/admin.password
+5365728f-4420-49bb-8d41-be21c65b5384root@nexus-repo:/srv/nexus/nexus-data#
+
+5365728f-4420-49bb-8d41-be21c65b5384
+
+
