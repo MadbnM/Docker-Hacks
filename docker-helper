@@ -1,1 +1,1 @@
-curl https://get.docker.com | sh
+curl https://get.docker.com | sh <--- run to auto install docker
