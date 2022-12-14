@@ -1,1 +1,13 @@
 curl https://get.docker.com | sh <--- run to auto install docker
+
+# Add user
+
+sudo usermod -aG docker username
+
+#start docker
+
+sudo systemctl start docker
+
+# to check of docker is installed
+
+docker run hello-world
